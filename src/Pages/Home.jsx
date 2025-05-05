@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LivroCard from '../components/LivroCard';
@@ -19,12 +20,21 @@ export default function Home() {
       <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center py-12 px-4">
         <h1 className="text-3xl font-bold mb-2">Hivox – Cresce ouvindo</h1>
         <p className="mb-4">Descubra seu próximo audiolivro favorito!</p>
-        <a
-          href="#catalogo"
-          className="inline-block bg-white text-purple-600 font-semibold px-6 py-2 rounded-full shadow"
-        >
-          Ir para o Catálogo
-        </a>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a
+            href="#catalogo"
+            className="inline-block bg-white text-purple-600 font-semibold px-6 py-2 rounded-full shadow"
+          >
+            Ir para o Catálogo
+          </a>
+
+          <Link to="/login">
+            <button className="inline-block bg-green-500 text-white font-semibold px-6 py-2 rounded-full shadow">
+              Entrar via WhatsApp
+            </button>
+          </Link>
+        </div>
       </section>
 
       {/* Catálogo de Livros */}
