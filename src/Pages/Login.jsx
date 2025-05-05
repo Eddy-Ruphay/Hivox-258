@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 
 export default function Login() {
-  const userNumber = '258841251204'; // Substitua pelo número dinâmico se quiser futuramente
-  const webhookUrl = `https://script.google.com/macros/s/AKfycbw-vcg1eD5NszmbZcihiawiP66A-ozfwPhXHWKvib-gWwMmsH17EIkIrFdfI3lEen7Z2A/exec?numero=${userNumber}`;
+  const userNumber = '258841251204'; // Número do seu WhatsApp
+  const webhookUrl = `https://script.google.com/macros/s/AKfycbwEhXKwzXLuPJ-4bF2PYwAnR89VYDpr9sU4Oh4nscywfrLHjkU83I5nli0Ikgt_a3jx/exec?numero=${userNumber}`;
 
   useEffect(() => {
     // Envia o número para o webhook assim que o componente carrega
     fetch(webhookUrl)
       .then((res) => res.text())
-      .then((res) => console.log(res));
+      .then((res) => console.log('Resposta do webhook:', res))
+      .catch((err) => console.error('Erro ao enviar para o webhook:', err));
   }, []);
 
   const whatsappLink = `https://wa.me/${userNumber}?text=Olá%20Hivox,%20quero%20fazer%20login`;
