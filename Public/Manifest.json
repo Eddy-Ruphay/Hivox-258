@@ -1,0 +1,33 @@
+{
+  "name": "Hivox – Cresce Ouvindo",
+  "short_name": "Hivox",
+  "description": "Plataforma de audiolivros e conteúdos em áudio, pensada para você crescer ouvindo.",
+  "lang": "pt-MZ",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/icons/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/home.png",
+      "sizes": "540x960",
+      "type": "image/png"
+    }
+  ]
+}
